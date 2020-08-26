@@ -2,7 +2,7 @@
 
 A module that do common color translations and manipulations.
 
-![Color utility animation](color-utils-animation.gif)
+![Color utility animation](color-utility-animation.gif)
 
 ## Install
 Modules are placed in a folder called `noodl_modules` *inside* the `project folder`. After modules have been added or changed refresh the Noodl project to have the changes take place/the nodes being accessible.
