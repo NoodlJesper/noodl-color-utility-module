@@ -1,0 +1,219 @@
+{
+    "name": "Color Utils Example",
+    "components": [
+        {
+            "name": "/Main",
+            "id": "d7d07812-ce6e-58fd-41dd-81e9f10f0b69",
+            "graph": {
+                "connections": [
+                    {
+                        "fromId": "3c74fb97-fc47-6966-584a-b393f6237315",
+                        "fromProperty": "red",
+                        "toId": "2ad2ac79-8353-1fef-80e8-6617b91a4a3b",
+                        "toProperty": "red"
+                    },
+                    {
+                        "fromId": "3c74fb97-fc47-6966-584a-b393f6237315",
+                        "fromProperty": "green",
+                        "toId": "2ad2ac79-8353-1fef-80e8-6617b91a4a3b",
+                        "toProperty": "green"
+                    },
+                    {
+                        "fromId": "3c74fb97-fc47-6966-584a-b393f6237315",
+                        "fromProperty": "blue",
+                        "toId": "2ad2ac79-8353-1fef-80e8-6617b91a4a3b",
+                        "toProperty": "blue"
+                    },
+                    {
+                        "fromId": "41102bf5-99fe-1e4e-1f9c-7813db4f6750",
+                        "fromProperty": "hasReachedStart",
+                        "toId": "bf6ba509-a6c1-46bd-8c25-b53a4cbb0b09",
+                        "toProperty": "restart"
+                    },
+                    {
+                        "fromId": "41102bf5-99fe-1e4e-1f9c-7813db4f6750",
+                        "fromProperty": "hasReachedEnd",
+                        "toId": "6c4ca565-2197-26dd-9bd3-8bc7b03fe7ab",
+                        "toProperty": "restart"
+                    },
+                    {
+                        "fromId": "6c4ca565-2197-26dd-9bd3-8bc7b03fe7ab",
+                        "fromProperty": "timerFinished",
+                        "toId": "41102bf5-99fe-1e4e-1f9c-7813db4f6750",
+                        "toProperty": "replayToStart"
+                    },
+                    {
+                        "fromId": "bf6ba509-a6c1-46bd-8c25-b53a4cbb0b09",
+                        "fromProperty": "timerFinished",
+                        "toId": "41102bf5-99fe-1e4e-1f9c-7813db4f6750",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "a3ff34fc-60f6-957d-8ef9-7f5c58d0eb67",
+                        "fromProperty": "onClick",
+                        "toId": "41102bf5-99fe-1e4e-1f9c-7813db4f6750",
+                        "toProperty": "replayToEnd"
+                    },
+                    {
+                        "fromId": "41102bf5-99fe-1e4e-1f9c-7813db4f6750",
+                        "fromProperty": "rotation",
+                        "toId": "dbb7ca9f-3680-fcc9-d996-c7e21d3dc929",
+                        "toProperty": "rotationValue"
+                    },
+                    {
+                        "fromId": "dbb7ca9f-3680-fcc9-d996-c7e21d3dc929",
+                        "fromProperty": "outputHex",
+                        "toId": "3c74fb97-fc47-6966-584a-b393f6237315",
+                        "toProperty": "inputHex"
+                    },
+                    {
+                        "fromId": "2ad2ac79-8353-1fef-80e8-6617b91a4a3b",
+                        "fromProperty": "outputHex",
+                        "toId": "476c6dc8-79de-db3a-bcc1-52773a3b29a5",
+                        "toProperty": "fillColor"
+                    },
+                    {
+                        "fromId": "19871b73-93b5-059c-55dc-5e471a902364",
+                        "fromProperty": "savedValue",
+                        "toId": "dbb7ca9f-3680-fcc9-d996-c7e21d3dc929",
+                        "toProperty": "inputHex"
+                    }
+                ],
+                "roots": [
+                    {
+                        "id": "a3ff34fc-60f6-957d-8ef9-7f5c58d0eb67",
+                        "type": "Group",
+                        "x": 355,
+                        "y": 278,
+                        "parameters": {
+                            "paddingLeft": {
+                                "value": 10,
+                                "unit": "px"
+                            },
+                            "paddingRight": {
+                                "value": 10,
+                                "unit": "px"
+                            },
+                            "paddingTop": {
+                                "value": 10,
+                                "unit": "px"
+                            },
+                            "paddingBottom": {
+                                "value": 10,
+                                "unit": "px"
+                            }
+                        },
+                        "ports": [],
+                        "children": [
+                            {
+                                "id": "476c6dc8-79de-db3a-bcc1-52773a3b29a5",
+                                "type": "Circle",
+                                "x": 20,
+                                "y": 82,
+                                "parameters": {
+                                    "size": 400,
+                                    "alignY": "center",
+                                    "alignX": "center",
+                                    "position": "absolute"
+                                },
+                                "ports": [],
+                                "children": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "3c74fb97-fc47-6966-584a-b393f6237315",
+                        "type": "HEX to RGB",
+                        "x": -128,
+                        "y": 292.5,
+                        "parameters": {
+                            "inputHex": "#006394"
+                        },
+                        "ports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "2ad2ac79-8353-1fef-80e8-6617b91a4a3b",
+                        "type": "RGB to HEX",
+                        "x": 123,
+                        "y": 292.5,
+                        "parameters": {},
+                        "ports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "dbb7ca9f-3680-fcc9-d996-c7e21d3dc929",
+                        "type": "Hue Rotation",
+                        "x": -116,
+                        "y": 91.5,
+                        "parameters": {
+                            "rotationValue": 25,
+                            "inputHex": "#E8423A"
+                        },
+                        "ports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "41102bf5-99fe-1e4e-1f9c-7813db4f6750",
+                        "type": "Animation",
+                        "x": 123,
+                        "y": 53.5,
+                        "parameters": {
+                            "rotation.startMode": "explicit",
+                            "rotation.endValue": 360,
+                            "duration": 4000,
+                            "easingCurve": "linear"
+                        },
+                        "ports": [
+                            {
+                                "name": "rotation",
+                                "plug": "output",
+                                "type": {
+                                    "name": "number"
+                                },
+                                "group": "Animation Values",
+                                "index": 1
+                            }
+                        ],
+                        "children": []
+                    },
+                    {
+                        "id": "bf6ba509-a6c1-46bd-8c25-b53a4cbb0b09",
+                        "type": "Timer",
+                        "x": 348,
+                        "y": 31.5,
+                        "parameters": {
+                            "duration": 1
+                        },
+                        "ports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "6c4ca565-2197-26dd-9bd3-8bc7b03fe7ab",
+                        "type": "Timer",
+                        "x": 350,
+                        "y": 129.5,
+                        "parameters": {},
+                        "ports": [],
+                        "children": []
+                    },
+                    {
+                        "id": "19871b73-93b5-059c-55dc-5e471a902364",
+                        "type": "Color",
+                        "x": -373,
+                        "y": 91.5,
+                        "parameters": {
+                            "value": "#EF8F45"
+                        },
+                        "ports": [],
+                        "children": []
+                    }
+                ]
+            }
+        }
+    ],
+    "settings": {},
+    "rootNodeId": "a3ff34fc-60f6-957d-8ef9-7f5c58d0eb67",
+    "version": "1",
+    "metadata": {}
+}
