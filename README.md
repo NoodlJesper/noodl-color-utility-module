@@ -5,7 +5,7 @@ A module that do common color translations and manipulations.
 ![Color utility animation](color-utility-animation.gif)
 
 ## Install
-Modules are placed in a folder called `noodl_modules` *inside* the `project folder`. After modules have been added or changed refresh the Noodl project to have the changes take place/the nodes being accessible.
+Copy the folder `project/noodl_modules/mui-icons-module` into `your-project-folder/noodl_modules`.
 
 ## Docs
 
